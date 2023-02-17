@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		* {box-sizing: border-box;}
+
+		.container {
+			width: 100%;
+			height: 600px;
+			border: 3px solid black;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+
+        .colba {
+        	width: 10%;
+        	height: 80%;
+        	border: 2px solid black;
+        	position: relative;
+        	border-bottom-right-radius: 50px;
+        	border-bottom-left-radius: 50px;
+        }
+
+        .water {
+        	position: absolute;
+        	width: 100%;
+        	height: 10%;
+        	bottom: 0;
+        	border-bottom-right-radius: 50px;
+        	border-bottom-left-radius: 50px;
+
+        	transition-duration: 2s;
+        }
+        .container:hover  .water {
+        	height: 100%;
+        }
+        #w1 {
+        	background: red;
+        	/*Движение с постоянной скоростью*/
+        	transition-timing-function: linear;
+        }
+        #w2 {
+        	background: green;
+        	/*Плавное начало и плавный конец*/
+        	transition-timing-function: ease;
+        }
+        #w3 {
+        	background: yellow;
+        	/*Плавное начало*/
+        	transition-timing-function: ease-in;
+        }
+        #w4 {
+        	background: blue;
+        	/*плавный конец*/
+        	transition-timing-function: ease-out;
+        }
+        #w5 {
+        	background: purple;
+        	/*Плавное начало и плавный конец*/
+        	transition-timing-function: ease-in-out;
+        }
+        #w6 {
+        	background: orange;
+        	/*Контролируемая анимация*/
+        	transition-timing-function: cubic-bezier(0.43, 0.25, 0, 0.1)
+        }
+        
+	</style>
+</head>
+<body>
+     <div class="container">
+     	<div class="colba">
+     		<div class="water" id="w1"></div>
+     	</div>
+     	<div class="colba">
+     		<div class="water" id="w2"></div>
+     	</div>
+     	<div class="colba">
+     		<div class="water" id="w3"></div>
+     	</div>
+     	<div class="colba">
+     		<div class="water" id="w4"></div>
+     	</div>
+     	<div class="colba">
+     		<div class="water" id="w5"></div>
+     	</div>
+     	<div class="colba">
+     		<div class="water" id="w6"></div>
+     	</div>
+     </div>
+</body>
+</html>
